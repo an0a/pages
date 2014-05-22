@@ -20,3 +20,20 @@ notifications:
     on_success: always
     on_failure: always
 
+<<<<<<< HEAD
+=======
+script:
+  - git config --global user.email "go.anoa@gmail.com"
+  - git config --global user.name "Travis"
+  - cd output
+  - git checkout master
+  - git pull
+  - cd ..
+  - cp CNAME output
+  - make publish
+  - cd output
+  - git add -f .
+  - git commit -a -m "add new site content"
+  - test $? -eq "0" && git push https://${GH_TOKEN}@github.com/pages/pages.github.io.git master --quiet
+  
+>>>>>>> aa4dc5768bc42ac19f91a8e1847f04fcaeb90222
