@@ -1,0 +1,32 @@
+language: python
+python:
+    - 2.7
+
+virtualenv:
+    system_site_packages: true
+
+env:
+    global:
+		- secure: "213074b8ca35366d0bbe8937fa4fda96505d4191"
+
+install:
+    - pip install -r requirements.txt
+
+before_script:
+    - source travis_before.sh
+
+
+script:
+  - git config --global user.email "go.anoa@gmail.com"
+  - git config --global user.name "Travis"
+  - cd output
+  - git checkout master
+  - git pull
+  - cd ..
+  - cp CNAME output
+  - make publish
+  - cd output
+  - git add -f .
+  - git commit -a -m "add new site content"
+  - test $? -eq "0" && git push https://${GH_TOKEN}@github.com/static-blog-sample/static-blog-sample.github.io.git master --quiet
+  
