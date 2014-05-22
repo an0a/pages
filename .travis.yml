@@ -1,23 +1,20 @@
 language: python
-python:
-    - 2.7
 
-virtualenv:
-    system_site_packages: true
+python:
+  - "2.7"
 
 env:
-    global:
-		- secure: "LM64I0jeH6s/+1B0HlYX1I+kjQ3XhsURo8SQSQO8YUncWZ1Hpj3fTrwuMz7IMpZeQrtbEwVhY7iTB43Wed4nSKKxK/RhkP/MlRgatlUbQnjQ4+w1KmMVnlHjQmumLX1VHTzqcMOhsUyZWbYz8IAdMkBPoyCqrgFHcI9m56rm78s="
+  global:
+    - secure: "LM64I0jeH6s/+1B0HlYX1I+kjQ3XhsURo8SQSQO8YUncWZ1Hpj3fTrwuMz7IMpZeQrtbEwVhY7iTB43Wed4nSKKxK/RhkP/MlRgatlUbQnjQ4+w1KmMVnlHjQmumLX1VHTzqcMOhsUyZWbYz8IAdMkBPoyCqrgFHcI9m56rm78s="
 
 install:
-    - pip install -r requirements.txt --use-mirrors
+  - pip install -r requirements.txt --use-mirrors
 	
 script:
-- make html
+  - make html
 
 notifications:
   email:
     on_success: always
     on_failure: always
 
-  
