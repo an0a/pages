@@ -7,7 +7,7 @@ virtualenv:
 
 env:
     global:
-		- secure: "213074b8ca35366d0bbe8937fa4fda96505d4191"
+		- secure: "LM64I0jeH6s/+1B0HlYX1I+kjQ3XhsURo8SQSQO8YUncWZ1Hpj3fTrwuMz7IMpZeQrtbEwVhY7iTB43Wed4nSKKxK/RhkP/MlRgatlUbQnjQ4+w1KmMVnlHjQmumLX1VHTzqcMOhsUyZWbYz8IAdMkBPoyCqrgFHcI9m56rm78s="
 
 install:
     - pip install -r requirements.txt --use-mirrors
@@ -20,20 +20,4 @@ notifications:
     on_success: always
     on_failure: always
 
-<<<<<<< HEAD
-=======
-script:
-  - git config --global user.email "go.anoa@gmail.com"
-  - git config --global user.name "Travis"
-  - cd output
-  - git checkout master
-  - git pull
-  - cd ..
-  - cp CNAME output
-  - make publish
-  - cd output
-  - git add -f .
-  - git commit -a -m "add new site content"
-  - test $? -eq "0" && git push https://${GH_TOKEN}@github.com/pages/pages.github.io.git master --quiet
   
->>>>>>> aa4dc5768bc42ac19f91a8e1847f04fcaeb90222
