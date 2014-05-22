@@ -1,0 +1,4 @@
+pages
+=====
+
+blog pages
