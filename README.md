@@ -1,4 +1,0 @@
-pages
-=====
-
-blog pages
