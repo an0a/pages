@@ -1,0 +1,3 @@
+[submodule "output"]
+	path = output
+	url = https://github.com/an0a/an0a.github.io.git
