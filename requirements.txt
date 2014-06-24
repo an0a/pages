@@ -1,3 +1,5 @@
 pelican
-Markdown
-fabric
+markdown
+beautifulsoup4
+webassets
+docutils
