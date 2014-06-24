@@ -3,12 +3,15 @@
 from __future__ import unicode_literals
 
 AUTHOR = u'anoa'
-SITENAME = u'내 로그'
+SITENAME = u'My Log'
 SITEURL = ''
 
-TIMEZONE = 'Asia/Korea'
+TIMEZONE = 'Asia/Seoul'
 
 DEFAULT_LANG = u'en'
+
+DEFAULT_DATE_FORMAT = '%Y/%m/%d'
+
 
 # Feed generation is usually not desired when developing
 FEED_ALL_ATOM = None
